@@ -87,7 +87,13 @@
         pre {
             padding: 7px;
             font-size: 13px;
-            font-family: Consolas, Monaco, Menlo, Consolas, monospace;
+            font-family: 'Fira Code', Consolas, Monaco, Menlo, Consolas, monospace;
+            src: url('woff2/FiraCode-Bold.woff2');
+            src: url('eot/FiraCode-Bold.eot') format('embedded-opentype'),
+                 url('woff2/FiraCode-Bold.woff2') format('woff2'),
+                 url('woff/FiraCode-Bold.woff') format('woff'),
+                 url('ttf/FiraCode-Bold.ttf') format('truetype');
+            font-style: normal;
             word-break: break-all;
             word-wrap: break-word;
         }
