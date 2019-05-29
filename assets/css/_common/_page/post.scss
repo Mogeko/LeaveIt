@@ -78,7 +78,7 @@
             color: $light-post-link-hover-color;
             .dark-theme &:hover {
                 color: $dark-post-link-hover-color;
-                font-weight: bold;
+                // font-weight: bold;
                 text-decoration: underline;
             }
         }
@@ -93,16 +93,13 @@
         }
 
         code:not([class]) {
-            padding: 5px 5px;
-            background: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ddd;
-            margin-left: 3px;
-            margin-right: 3px;
+            padding: 1px 6px;
+            margin: 0 2px;
+            background: #eaeaea;
+            border-radius: 5px;
 
             .dark-theme &:not([class]) {
-                background: transparent;
-                box-shadow: 1px 1px 0 $dark-font-secondary-color, 2px 2px 0 $dark-font-secondary-color;
+                background: #3b3d42;
             }
         }
 

@@ -103,45 +103,20 @@
   }
   
   blockquote {
-    font-size: 1rem;
-    display: block;
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: $light-border-color;
-    padding: 1.5em 1.2em 0.5em 1.2em;
-    margin: 0 0 2em 0;
-    position: relative;
-
-    &:before {
-      content: '\201C';
-      position: absolute;
-      top: 0em;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #fff;
-      width: 3rem;
-      height: 2rem;
-      font: 6em/1.08em 'PT Sans', sans-serif;
-      color: $light-post-link-color;
-      text-align: center;
-      
-       .dark-theme &{
-         color: $dark-post-link-color;
-       }
-    }
-    &:after {
-      content: "#blockquote" attr(cite);
-      display: block;
-      text-align: right;
-      font-size: 0.875em;
-      color: $light-post-link-color;
-
-       .dark-theme &{
-         color: $dark-post-link-color;
-       }
-    }
+    font: 14px/22px normal helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    margin-right: 0%;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-left: 3px solid #ccc;
+    background-color:#f1f1f1;
 
     .dark-theme & {
-      border-color: $dark-border-color;
+      // background-color:#29292D;
+      background-color:#252529;
     }
   }
