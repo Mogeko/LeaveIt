@@ -1,8 +1,21 @@
 /** Font **/
 
+/* iconfont */
+@import url('https://at.alicdn.com/t/font_1230224_iaqjgmg3vjq.css');
+
 /* josefin-sans-regular && pt-sans-regular */
 @import url('https://fonts.proxy.ustclug.org/css?family=Josefin+Sans|PT+Sans&display=swap');
 
+/* Fira Code */
+@font-face{
+    font-family: 'Fira Code';
+    src: url('/font/FiraCode-Regular.woff2');
+    src: url('/font/FiraCode-Regular.woff2') format('woff2'),
+         url('/font/FiraCode-Regular.eot') format('embedded-opentype'),
+         url('/font/FiraCode-Regular.woff') format('woff'),
+         url('/font/FiraCode-Regular.ttf') format('truetype');
+    font-style: normal;
+}
   
   html {
     &::-webkit-scrollbar {

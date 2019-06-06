@@ -33,10 +33,13 @@ jQuery(function($) {
         const currentTheme = window.localStorage && window.localStorage.getItem('theme')
         const isDark = currentTheme === 'dark'
         $('body').toggleClass('dark-theme', isDark)
+        $('.icon-switch').toggleClass('icon-sun', isDark)
+        $('.icon-switch').toggleClass('icon-moon', !isDark)
         $('.theme-switch').on('click', () => {
             $('body').toggleClass('dark-theme')
             window.localStorage &&
                 window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+            $('.icon-switch').toggleClass('icon-sun icon-moon')
         })
     }
 

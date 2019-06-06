@@ -1,7 +1,3 @@
   {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify}}
-  {{ $iconfont := resources.Get "font/iconfont.css" }}
-  {{ $fira_code := resources.Get "font/fira_code.css" }}
-  <link rel="stylesheet" href="{{ $fira_code.RelPermalink }}">
-  <link rel="stylesheet" href="{{ $iconfont.RelPermalink }}">
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
