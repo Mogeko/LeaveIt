@@ -5,15 +5,17 @@
 {{ $prettify := resources.Get "/js/prettify.min.js" }}
 {{ $dynamic := resources.Get "/js/dynamic.to.top.min.js" }}
 {{ $main := resources.Get "/js/main.js" }}
-{{ $lihtGallery := resources.Get "/js/lightGallery-all.min.js" }}
-{{ $lihtGallery_init := resources.Get "/js/lightGallery-init.js" }}
 {{ $custom := resources.Get "/js/_custom.js" }}
 {{ if .IsPage }}
 
     {{ if $postHasImages }}
-     <link href="https://cdn.bootcss.com/lightgallery/1.6.11/css/lg-fb-comment-box.min.css" rel="stylesheet">  
-     {{ $vendorscript := slice $jquery $lazysizes $prettify $dynamic $main $lihtGallery $custom $lihtGallery_init | resources.Concat "/js/vendor_gallery.js" | resources.Minify }} 
-     <script src="{{ printf "%s%s" $cdn_url $vendorscript.RelPermalink }}" async="" ></script>
+        {{ if .Site.Params.lightGallery }}
+            {{ $lihtGallery := resources.Get "/js/lightGallery-all.min.js" }}
+            {{ $lihtGallery_init := resources.Get "/js/lightGallery-init.js" }}
+            <link href="https://cdn.bootcss.com/lightgallery/1.6.11/css/lg-fb-comment-box.min.css" rel="stylesheet">  
+            {{ $vendorscript := slice $jquery $lazysizes $prettify $dynamic $main $lihtGallery $custom $lihtGallery_init | resources.Concat "/js/vendor_gallery.js" | resources.Minify }} 
+            <script src="{{ printf "%s%s" $cdn_url $vendorscript.RelPermalink }}" async="" ></script>
+        {{ end }}
     {{ else }}
     {{ $vendorscript := slice $jquery $prettify $dynamic $custom $main | resources.Concat "/js/vendor_no_gallery.js" | resources.Minify }}
     <script src="{{ printf "%s%s" $cdn_url $vendorscript.RelPermalink }}" async=""></script>
