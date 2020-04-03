@@ -1,3 +1,7 @@
+### I migrated this project to [Mogeko/mogege](https://github.com/Mogeko/mogege)
+
+---
+
 LeaveIt Hugo Theme
 ========================
 
